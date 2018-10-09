@@ -20,6 +20,7 @@ import Header from './components/Header';
 import Login from './containers/Login';
 // import Settings from './containers/Settings';
 // import Signup from './containers/Signup';
+// import Locations from './containers/Locations'
 
 // ==========
 
@@ -40,7 +41,8 @@ class App extends React.Component {
               <Route path="/login" component={Login} />
               {/* <Route path="/signup" component={Signup} />
               <Route path="/dashboard" component={Dashboard} />
-              <Route path="/settings" component={Settings} /> */}
+              <Route path="/settings" component={Settings} />
+              <Route path="/locations" component={Locations}*/}
             </Switch>
           </div>
         </BrowserRouter>

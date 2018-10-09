@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const request = (path, method = 'get', body = null) => {
+  console.log(process.env.REACT_APP_BACKEND)
   let bearerToken = '';
   const token = localStorage.getItem('token');
   if (token) {

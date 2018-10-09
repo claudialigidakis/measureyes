@@ -4,14 +4,15 @@
   "description": "Bringing A/B testing metrics and methods from the digital world to physical environments",
   "main": "./public/index.html",
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
+    "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.1.3",
+    "dotenv": "^6.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
@@ -23,5 +24,12 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {},
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

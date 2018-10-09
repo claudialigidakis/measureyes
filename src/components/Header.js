@@ -13,6 +13,9 @@ import {
   DropdownItem
 } from 'reactstrap';
 
+// ROUTER
+import { Link } from 'react-router-dom'
+
 //REDUX
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
@@ -49,26 +52,30 @@ class Header extends React.Component {
                   </DropdownToggle>
                   <DropdownMenu right="right">
                     <DropdownItem>
-                      Settings
+                      Locations
                     </DropdownItem>
                     <DropdownItem>
-                      Locations
+                      Settings
                     </DropdownItem>
                     <DropdownItem divider="divider"/>
                     <DropdownItem>
-                      Log Out
+                      <Link to="/" onClick={() => {
+                          this.props.accountLogout()
+                        }}>
+                        Log Out
+                      </Link>
                     </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
-              </Nav> )
-              : ( <Nav className="ml-auto" navbar="navbar">
-                  <NavItem>
-                    <NavLink href="/Login">Login</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="/Signup">Sign Up</NavLink>
-                  </NavItem>
-                </Nav> )
+              </Nav>)
+              : (<Nav className="ml-auto" navbar="navbar">
+                <NavItem>
+                  <NavLink href="/Login">Login</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/Signup">Sign Up</NavLink>
+                </NavItem>
+              </Nav>)
           }
         </Collapse>
       </Navbar>
