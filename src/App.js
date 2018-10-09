@@ -12,12 +12,12 @@ import { connect } from 'react-redux';
 import { getAccount } from './state/actions/auth';
 
 // COMPONENTS
-import Header from './components/Header';
+import Header from './shared/Header';
 
 // CONTAINERS
 // import Dashboard from './containers/Dashboard';
 // import Home from './containers/Home';
-import Login from './containers/Login';
+import Login from './pages/Login';
 // import Settings from './containers/Settings';
 // import Signup from './containers/Signup';
 // import Locations from './containers/Locations'

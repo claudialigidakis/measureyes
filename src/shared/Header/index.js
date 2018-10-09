@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom'
 //REDUX
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {accountLogout} from '../state/actions/auth';
+import {accountLogout} from '../../state/actions/auth';
 
 class Header extends React.Component {
   constructor(props) {
@@ -46,34 +46,20 @@ class Header extends React.Component {
                 <NavItem>
                   <NavLink href="/Dashboard">Dashboard</NavLink>
                 </NavItem>
-                <UncontrolledDropdown nav="nav" inNavbar="inNavbar">
-                  <DropdownToggle nav="nav" caret="caret">
-                    Account
-                  </DropdownToggle>
-                  <DropdownMenu right="right">
-                    <DropdownItem>
-                      Locations
-                    </DropdownItem>
-                    <DropdownItem>
-                      Settings
-                    </DropdownItem>
-                    <DropdownItem divider="divider"/>
-                    <DropdownItem>
-                      <Link to="/" onClick={() => {
-                          this.props.accountLogout()
-                        }}>
-                        Log Out
-                      </Link>
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
+                <NavItem>
+                  <NavLink href="/Account">Account</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/" onClick={() => {
+                      this.props.accountLogout()
+                    }}>
+                    Log Out
+                  </NavLink>
+                </NavItem>
               </Nav>)
               : (<Nav className="ml-auto" navbar="navbar">
                 <NavItem>
                   <NavLink href="/Login">Login</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/Signup">Sign Up</NavLink>
                 </NavItem>
               </Nav>)
           }
