@@ -1,4 +1,9 @@
 import React from 'react';
+import {
+  Container,
+  Row,
+  Col
+} from 'reactstrap';
 
 // REDUX
 import {bindActionCreators} from 'redux';
@@ -15,8 +20,16 @@ class Location extends React.Component {
     return (
       <div>
         <Video />
-        <Weather />
-        <Events />
+        <Container className="locations-weather-events">
+          <Row>
+            <Col sm="6">
+              <Weather />
+            </Col>
+            <Col sm="6">
+              <Events />
+            </Col>
+          </Row>
+        </Container>
         <Graphs />
       </div>
     );
