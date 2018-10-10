@@ -1,9 +1,49 @@
 .dashboard-container {
   padding: 1rem;
+  font-size: .9rem;
+}
+
+.dashboard-sidebar .list-group-item {
+  background-image: linear-gradient(to right, #1267a5, #339ffc);
+  border: 0;
+  margin-bottom: 0;
+  padding: 1.5rem 2rem;
+  color: #fff;
+}
+
+.dashboard-sidebar .list-group-item-action:hover {
+  background-image: linear-gradient(to right, #0c5c96, #2d95ef);
+}
+
+.dashboard-sidebar .list-group-item:not(:last-child) {
+  border-bottom: 1px solid #fff;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+.list-group-item:last-child {
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.rangeslider-horizontal {
+  height: 5px !important;
 }
 
 .rangeslider-horizontal .rangeslider__fill {
-  background-color: red !important;
+  background-color: #fc544c !important;
+}
+.rangeslider-horizontal .rangeslider__handle {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+}
+
+.rangeslider-horizontal .rangeslider__handle::after {
+  content: none !important;
 }
 
 #weather .date {

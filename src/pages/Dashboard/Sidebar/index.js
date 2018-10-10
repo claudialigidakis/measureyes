@@ -15,7 +15,7 @@ import Location from './Location'
 class Sidebar extends React.Component {
   render () {
     return (
-      <ListGroup>
+      <ListGroup className="dashboard-sidebar">
         <ListGroupItem active tag="a" href="#" action>Live Feed</ListGroupItem>
         <ListGroupItem tag="a" href="#" action>Past Data</ListGroupItem>
         <ListGroupItem tag="a" href="#" action>Future Predictions</ListGroupItem>
