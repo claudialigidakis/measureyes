@@ -56,46 +56,36 @@ class Graphs extends React.Component {
       }
     ];
     const data = [
-      {
-        name: 'Group A',
-        value: 400
-      }, {
-        name: 'Group B',
-        value: 300
-      }, {
-        name: 'Group C',
-        value: 300
-      }, {
-        name: 'Group D',
-        value: 200
-      }
+          {name: '8am', htr: 3},
+          {name: '10am', htr: 4},
+          {name: 'Noon', htr: 4},
+          {name: '2pm', htr: 5},
+          {name: '4pm', htr: 1},
+          {name: '6pm', htr: 4},
+          {name: '8pm', htr: 2},
     ];
-    const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
-    const RADIAN = Math.PI / 180;
     return (
     <div>
       <div>
-        pie chart
+      <BarChart width={500} height={200} data={data}>
+       <CartesianGrid strokeDasharray="3 3"/>
+       <XAxis dataKey="name"/>
+       <YAxis/>
+       <Tooltip/>
+       <Legend />
+       <Bar dataKey="htr" fill="#82ca9d" />
+      </BarChart>
       </div>
       <div>
-        percentage Bar Graphs
-      </div>
-      <div>
-        percentage Bar Graphs
-      </div>
-      <div>
-        percentage Bar Graphs
-      </div>
-      <div>
-        <BarChart width={400} height={300} data={bar_data}>
-          <CartesianGrid strokeDasharray="3 3"/>
-          <XAxis dataKey="name"/>
-          <YAxis/>
-          <Tooltip/>
-          <Legend/>
-          <Bar dataKey="Turns" fill="#8884d8"/>
-          <Bar dataKey="People" fill="#82ca9d"/>
+        <BarChart width={500} height={300} data={bar_data}>
+        <CartesianGrid strokeDasharray="3 3"/>
+        <XAxis dataKey="name"/>
+        <YAxis/>
+        <Tooltip/>
+        <Legend/>
+        <Bar dataKey="Turns" fill="#8884d8"/>
+        <Bar dataKey="People" fill="#82ca9d"/>
         </BarChart>
       </div>
     </div>)
