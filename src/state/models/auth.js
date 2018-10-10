@@ -24,6 +24,12 @@ class Auth {
     return token.data
   }
 
+  static getAccountData = async () => {
+    const authToken = await Auth.getAccount()
+    const token = await request(`/accounts/${authToken.id}`)
+    return token.data.data
+  }
+
 }
 
 export default Auth

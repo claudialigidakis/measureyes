@@ -1,16 +1,12 @@
 import auth from './auth';
-// import stores from './stores';
-// import admin from './admin';
-// import helper from './helper';
-// import products from './products';
-// import inventory from './inventory';
-// import workstream from './workstream';
+import account from './account';
 
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 
 const rootReducer = combineReducers({
     auth,
+    account,
     form: formReducer
 });
 

@@ -7,6 +7,7 @@ export const ACCOUNT_SIGNUP_PENDING = 'ACCOUNT_SIGNUP_PENDING';
 export const ACCOUNT_SIGNUP_SUCCESS = 'ACCOUNT_SIGNUP_SUCCESS';
 export const ACCOUNT_SIGNUP_FAILED = 'ACCOUNT_SIGNUP_FAILED';
 export const GET_ACCOUNT = 'GET_ACCOUNT';
+export const GET_ACCOUNT_DATA = 'GET_ACCOUNT_DATA'
 export const NOT_LOGGED_IN = 'NOT_LOGGED_IN';
 export const ACCOUNT_LOGOUT = 'ACCOUNT_LOGOUT';
 
@@ -46,6 +47,13 @@ export const getAccount = () => {
     catch (err) {
       dispatch({type: NOT_LOGGED_IN, payload: err});
     }
+  }
+}
+
+export const getAccountData = () => {
+  return async (dispatch) => {
+      const token = await Auth.getAccountData()
+      dispatch({type: GET_ACCOUNT_DATA, payload: token});
   }
 }
 

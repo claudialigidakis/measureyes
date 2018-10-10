@@ -6,6 +6,7 @@ import {
   ACCOUNT_SIGNUP_SUCCESS,
   ACCOUNT_SIGNUP_FAILED,
   GET_ACCOUNT,
+  GET_ACCOUNT_DATA,
   NOT_LOGGED_IN,
   ACCOUNT_LOGOUT
 } from '../actions/auth';
@@ -13,6 +14,7 @@ import {
 let initialState = {
   isLoading: false,
   account: {},
+  accountData: {},
   showLoginError: false,
   showSignupError: false,
   authorized: false
@@ -34,6 +36,8 @@ export default (state = initialState, action) => {
       return {...state, isLoading: false, showSignupError: true};
     case GET_ACCOUNT:
       return {...state, isLoading: false, account: action.payload, authorized: true};
+    case GET_ACCOUNT_DATA:
+      return {...state, isLoading: false, accountData: action.payload, authorized: true};
     case NOT_LOGGED_IN:
       return {...state, isLoading: false, authorized: false};
     case ACCOUNT_LOGOUT:
