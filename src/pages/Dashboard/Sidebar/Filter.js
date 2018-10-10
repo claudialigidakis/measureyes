@@ -28,20 +28,22 @@ class Filter extends React.Component {
   handleBreakChangeHorizontal = value => {
     this.setState({break_horizontal: value})
   };
-  render() {
-    const formatSec = value => parseFloat(value).toFixed(2) + ' sec'
 
+  render () {
+    const formatSec = value => parseFloat(value).toFixed(2) + ' sec'
     const {yaw_horizontal, dwell_horizontal, break_horizontal} = this.state
-    return (<ListGroupItem>
-      <ListGroupItemText>
-        <Slider min={0} max={90} step={1} value={yaw_horizontal} onChange={this.handleYawChangeHorizontal}/>
-        Yaw Angle: <span className='value'>{yaw_horizontal}</span>
-        <Slider min={0} max={5} step={.1} format={formatSec} value={dwell_horizontal} onChange={this.handleDwellChangeHorizontal}/>
-        Dwell Time: <span className='value'>{formatSec(dwell_horizontal)}</span>
-        <Slider min={0} max={5} step={.1} format={formatSec} value={break_horizontal} onChange={this.handleBreakChangeHorizontal}/>
-        Break Time: <span className='value'>{formatSec(break_horizontal)}</span>
-      </ListGroupItemText>
-    </ListGroupItem>);
+    return (
+      <ListGroupItem>
+        <ListGroupItemText>
+          <Slider min={0} max={90} step={1} value={yaw_horizontal} onChange={this.handleYawChangeHorizontal}/>
+          Yaw Angle: <span className='value'>{yaw_horizontal}</span>
+          <Slider min={0} max={5} step={.1} format={formatSec} value={dwell_horizontal} onChange={this.handleDwellChangeHorizontal}/>
+          Dwell Time: <span className='value'>{formatSec(dwell_horizontal)}</span>
+          <Slider min={0} max={5} step={.1} format={formatSec} value={break_horizontal} onChange={this.handleBreakChangeHorizontal}/>
+          Break Time: <span className='value'>{formatSec(break_horizontal)}</span>
+        </ListGroupItemText>
+      </ListGroupItem>
+    );
   }
 }
 
