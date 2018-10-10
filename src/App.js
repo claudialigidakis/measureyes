@@ -3,6 +3,8 @@ import React from 'react';
 //CSS
 import './App.css';
 import 'react-open-weather/lib/css/ReactWeather.css';
+import 'react-rangeslider/lib/index.css'
+
 // ROUTER
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
@@ -18,9 +20,6 @@ import Header from './shared/Header';
 import Dashboard from './pages/Dashboard';
 // import Home from './containers/Home';
 import Login from './pages/Login';
-// import Settings from './containers/Settings';
-// import Signup from './containers/Signup';
-// import Locations from './containers/Locations'
 
 // ==========
 
@@ -42,8 +41,6 @@ class App extends React.Component {
               <Route path="/login" component={Login} />
               {/* <Route path="/signup" component={Signup} /> */}
               <Route path="/dashboard" component={Dashboard} />
-            {/*  <Route path="/settings" component={Settings} />
-              <Route path="/locations" component={Locations}*/}
             </Switch>
           </div>
         </BrowserRouter>

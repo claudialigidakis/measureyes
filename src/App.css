@@ -2,11 +2,23 @@
   padding: 1rem;
 }
 
-#weather {
-  border: 2px solid black;
+.rangeslider-horizontal .rangeslider__fill {
+  background-color: red !important;
 }
 
 #weather .date {
+  display: none;
+}
+
+#weather .info {
+  display: none;
+}
+
+#weather h2 {
+  display: none;
+}
+
+.rw-box-right {
   display: none;
 }
 
