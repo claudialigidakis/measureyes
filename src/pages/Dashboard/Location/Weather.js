@@ -6,10 +6,11 @@ import {connect} from 'react-redux';
 
 export default class Weather extends React.Component {
   render() {
-    const API_KEY = `${process.env.WEATHER_API_KEY}`
+    const API_KEY = "dfc3cb6c11684fc6a0025640181010"
+
     return (
-    <div>
-      <ReactWeather forecast="today" apikey={API_KEY} type="auto"/>
+    <div id="weather">
+      <ReactWeather forecast="today" unit="imperial" apikey={API_KEY} type="auto"/>
     </div>
   )}
 }
