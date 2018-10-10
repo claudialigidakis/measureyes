@@ -19,7 +19,7 @@ class Location extends React.Component {
       <ListGroupItem>
         <ListGroupItemHeading>
           Location
-          <small className="sidebar-small">(choose up to two locations)</small>
+          <small className="dashboard-sidebar-small">(choose up to two locations)</small>
         </ListGroupItemHeading>
         <ListGroupItemText>
           <Form>

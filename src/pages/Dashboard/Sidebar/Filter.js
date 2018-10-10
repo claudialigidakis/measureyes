@@ -1,5 +1,5 @@
 import React from 'react';
-import {ListGroupItem, ListGroupItemHeading, ListGroupItemText} from 'reactstrap';
+import {ListGroupItem, ListGroupItemText} from 'reactstrap';
 import ReactDOM from 'react-dom';
 import Slider from 'react-rangeslider'
 

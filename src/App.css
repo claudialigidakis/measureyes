@@ -29,6 +29,11 @@
   border-bottom-right-radius: .5rem;
 }
 
+.dashboard-sidebar-small {
+  font-size: .65rem;
+  margin-left: 5px;
+}
+
 .rangeslider-horizontal {
   height: 5px !important;
 }
@@ -36,6 +41,7 @@
 .rangeslider-horizontal .rangeslider__fill {
   background-color: #fc544c !important;
 }
+
 .rangeslider-horizontal .rangeslider__handle {
   width: 15px !important;
   height: 15px !important;
@@ -44,6 +50,14 @@
 
 .rangeslider-horizontal .rangeslider__handle::after {
   content: none !important;
+}
+
+.locations-weather-events {
+  padding: 0;
+}
+
+.location-video {
+  width: 100%;
 }
 
 #weather .date {
@@ -58,15 +72,18 @@
   display: none;
 }
 
-.rw-box-right {
+#weather .hr {
   display: none;
 }
 
-.location-video {
-  width: 100%;
+#weather .rw-main .rw-today .current {
+  font-size: 1.3rem;
 }
 
-.sidebar-small {
-  font-size: .65rem;
-  margin-left: 5px;
+#weather .rw-box-right .wicon {
+  font-size: 30px;
+}
+
+.rw-box-right {
+  display: none;
 }
