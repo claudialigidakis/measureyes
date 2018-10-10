@@ -2,7 +2,7 @@
 import React from 'react';
 //CSS
 import './App.css';
-
+import 'react-open-weather/lib/css/ReactWeather.css';
 // ROUTER
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
