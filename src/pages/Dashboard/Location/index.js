@@ -4,21 +4,23 @@ import React from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-// COMPONENETS
+// COMPONENTS
 import Events from './Events'
 import Graphs from './Graphs'
 import Video from './Video'
 import Weather from './Weather'
 
-export default class Location extends React.Component {
-  render(){
-  return (
-    <div>
-      <Video />
-      <Weather />
-      <Events />
-      <Graphs />
-    </div>
-  );
+class Location extends React.Component {
+  render () {
+    return (
+      <div>
+        <Video />
+        <Weather />
+        <Events />
+        <Graphs />
+      </div>
+    );
   }
 }
+
+export default Location
