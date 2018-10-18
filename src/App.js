@@ -15,11 +15,10 @@ import { getAccount, getAccountData } from './state/actions/auth';
 
 // COMPONENTS
 import Header from './shared/Header';
-
+import Footer from './shared/Footer'
 // CONTAINERS
 import Dashboard from './pages/Dashboard';
-// import Home from './containers/Home';
-import Login from './pages/Login';
+import Home from './pages/Home';
 
 // ==========
 
@@ -34,14 +33,14 @@ class App extends React.Component {
       <div>
         <BrowserRouter>
           <div>
-            <Header />
+            {!this.props.authorized ? null : <Header />}
             <Switch>
               <Route exact path="/" component={() => <Redirect to="/home" />} />
-              {/* <Route path="/home" component={Home} /> */}
-              <Route path="/login" component={Login} />
+              <Route path="/home" component={Home} />
               {/* <Route path="/signup" component={Signup} /> */}
               <Route path="/dashboard" component={Dashboard} />
             </Switch>
+            <Footer />
           </div>
         </BrowserRouter>
       </div>

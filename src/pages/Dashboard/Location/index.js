@@ -20,6 +20,7 @@ class Location extends React.Component {
     return (
       <div>
         <Video />
+        <br />
         <Container className="locations-weather-events">
           <Row>
             <Col sm="6">
@@ -30,6 +31,7 @@ class Location extends React.Component {
             </Col>
           </Row>
         </Container>
+        <br />
         <Graphs />
       </div>
     );

@@ -1,3 +1,20 @@
+.jumbotron {
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
+}
+
+#team .media {
+  height: 20rem;
+  padding-top: 10px;
+  width: 20rem;
+}
+
+#signInForm {
+max-width: 30rem;
+padding-top: 10rem;
+}
+
 .dashboard-container {
   padding: 1rem;
   font-size: .9rem;
