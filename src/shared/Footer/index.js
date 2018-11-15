@@ -16,10 +16,10 @@ class Footer extends React.Component {
   }
   render() {
     return (
-    <footer className="font-small pt-4 mt-4">
+    <footer className="font-small pt-2 mt-2">
       <div className="footer-copyright text-center py-3">
         <Container fluid>
-          &copy; {new Date().getFullYear()} Copyright: Claudia Ligidakis
+          &copy; {new Date().getFullYear()} Copyright: MeasurEyes
         </Container>
       </div>
     </footer>);

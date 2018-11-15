@@ -33,12 +33,10 @@ class App extends React.Component {
       <div>
         <BrowserRouter>
           <div>
-            {!this.props.authorized ? null : <Header />}
+            <Header />
             <Switch>
               <Route exact path="/" component={() => <Redirect to="/home" />} />
               <Route path="/home" component={Home} />
-              {/* <Route path="/signup" component={Signup} /> */}
-              <Route path="/dashboard" component={Dashboard} />
             </Switch>
             <Footer />
           </div>
